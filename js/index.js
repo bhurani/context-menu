@@ -21,11 +21,7 @@ window.oncontextmenu = e =>{
   menu.style.top = `${y}px`;
   menu.style.visibility = 'visible';
 
-  if(x > (winWidth - menuWidth - shareMenuWidth)){
-    shareMenu.style.left = '-200px';
-  }else{
-    shareMenu.style.left = '';
-  }
+  shareMenu.style.left = x > (winWidth - menuWidth - shareMenuWidth) ? '-200px' : '';
 };
 
 window.onclick = () => menu.style.visibility = 'hidden';
